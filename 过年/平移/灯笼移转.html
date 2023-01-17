@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福1</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 左置右 */
+        @keyframes anim{
+            /* 0%{
+                transform: translate(-500px);
+            } */
+            /* 50%{
+                 transform: translate(500px);
+            } */
+            50%{
+                transform: translate(1300px);
+            }
+            51%{
+                transform:rotate(1080deg) translate(1300px);
+                /* transform: translate(1000px);
+                transform: rotate(360deg);
+                transform: translate(-1,2); */
+                
+            }
+            
+        }
+        /* 右至左 */
+        @keyframes anim2{
+            /* 0%{
+                transform: translate(-500px);
+            } */
+            /* 50%{
+                 transform: translate(500px);
+            } */
+            50%{
+                transform: translate(-1000px);
+            }
+            51%{
+                transform:rotate(1080deg) translate(-1000px);
+                /* transform: translate(1000px);
+                transform: rotate(360deg);
+                transform: translate(-1,2); */
+                
+            }
+            
+        }
+
+        .deng{
+            position: fixed;
+            display: flex;
+            left:-600px;
+            /* width: 500px;
+            height: 500px;
+            left: 35%;
+            top:10%;
+            align-self: center;
+            margin: 50px auto; */
+
+            animation: anim 3s linear 1s infinite;
+        }
+
+        .deng2{
+            position: fixed;
+            display: flex;
+            right:-700px;
+            animation: anim2 3s linear 3s infinite;
+        }
+    </style>
+</head>
+<body>
+        <img class="deng" src="灯笼1.png" alt="">
+        <img class="deng2" src="灯笼1.png" alt="">
+</body>
+</html>

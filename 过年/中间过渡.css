@@ -1,0 +1,638 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+@keyframes go {
+    0%{right: -1002px;}
+    100%{transform: translate(-1000px);}
+}
+@keyframes go2 {
+    0%{leftt: -1002px;}
+    100%{transform: translate(1000px);}
+}
+@keyframes go3 {
+    0%{bottom: -300px;}
+    100%{transform: translate(x-0px,y-1000px);}  
+}
+.txt1{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    height: 300px;
+    width: 1020px;
+    /* border: 1px solid red; */
+
+    /* 隐藏在右边框外2px */
+    right: -1002px;
+    animation: go 20s linear 0s infinite;
+}
+.txt1 h1{
+    font-size: 100px;
+    font-family: 宋体;
+    color: red;
+}
+.txt1 p{
+    font-size: 20px;
+    color: red;
+}
+.txt2{
+    display: flex;
+    position: fixed;
+    
+    flex-direction: column;
+    
+    height: 300px;
+    width: 1000px;
+    /* border: 1px solid red; */
+
+    /* 隐藏在左边框外2px */
+    /* bottom: 20px; */
+    left:-1002px;
+    animation: go2 18s linear 0s infinite;
+}
+.txt2 h1{
+    font-size: 100px;
+    font-family: 宋体;
+    color: rgb(255, 68, 0);
+    flex:flex-end;
+}
+.txt3{
+    display: flex;
+    position: fixed;
+    bottom: -100px;
+    left: 100px;
+
+    height: 300px;
+    width: 1300px;
+    /* border: 1px solid red; */
+    animation: go3 20s linear 0s infinite;
+}
+.txt3 h1{
+    font-size: 100px;
+    font-family: 宋体;
+    color: rgb(255, 221, 0);
+    flex:flex-end;
+}
+@keyframes p4 {
+    0%{top:-400px;}
+    50%{top:70%;}
+    100%{top:1000px;}
+    
+}
+.txt4{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top:-300px;
+    left: 270px;
+
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid rgb(255, 153, 0); */
+
+    animation: p4 5s linear 2s infinite;
+}
+.txt4 p{
+    /* font-size: 10px; */
+    color: rgb(240, 102, 16);
+    position: relative;
+    
+}
+
+.txt4_2{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 100px;
+
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid rgb(255, 153, 0); */
+
+    animation: p4 5s linear 0s infinite;
+}
+.txt4_2 p{
+    /* font-size: 10px; */
+    color: rgb(240, 102, 16);
+    position: relative;
+    
+}
+@keyframes p5 {
+    0%{bottom: -300px;}
+    50%{right: 50px;}  
+    51%{transform: rotate(360deg);}
+    
+}
+.txt5{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid yellow; */
+    bottom: -300px;
+
+    animation: p5 5s linear 0s infinite;
+}
+.txt5 p{
+    /* font-size: 10px; */
+    color: rgb(240, 102, 16);
+    position: relative;
+    
+}
+
+/* --------爆竹 -------------------------*/
+/* 无到有 然后渐进消失 */
+@keyframes bao{
+    0%{opacity: 1;};
+    99%{opacity: 1;};
+    100%{opacity: 0;};
+}
+/* 有 然后渐进消失 */
+@keyframes bao_gai {
+    /* 出现 0.1%x100s */
+    0.1%{opacity: 1;}
+    /* 消失 */
+    1%{opacity: 0;}
+    100%{opacity: 0;}    
+}
+/* pao1 火花移动 */
+@keyframes fire1 {
+    0%{
+        right: -100px;
+        top:5px;
+    }
+    0.45%{
+        right: -90px;
+        top:-300px;
+    }
+    0.80%{
+        right: -70px;
+        top:-380px;
+    }
+    0.99%{
+        right:-60px;
+        top:-500px;
+    }    
+    1%{
+        right:-100px;
+        top:-600px;
+        /* 火花消失 */
+        opacity: 0;
+    }   
+}
+/* pao2 火花移动 */
+@keyframes fire2 {
+    0%{
+        right: -100px;
+        top:5px;
+    }
+    0.45%{
+        right: -90px;
+        top:-300px;
+    }
+    0.80%{
+        right: -70px;
+        top:-380px;
+    }
+    0.99%{
+        right:-60px;
+        top:-500px;
+    }    
+    1%{
+        right:-100px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+/* pao2 火花移动 */
+@keyframes fire3 {
+    0%{
+        right: -100px;
+        top:5px;
+    }
+    0.45%{
+        right: -90px;
+        top:-300px;
+    }
+    0.80%{
+        right: -70px;
+        top:-380px;
+    }
+    0.99%{
+        right:-80px;
+        top:-500px;
+    }    
+    1%{
+        right:-100px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+.pao1 .fire{
+    position: fixed;
+    display: flex;
+    right: -100px;
+    top:5px;
+    z-index: 100;
+ animation: fire1 300s ease-in-out 0s  ; 
+ 
+}
+/* 右—爆竹 */
+.pao1 .bao{
+    position: fixed;
+    right: -100px;
+    z-index: 100;
+    /* 直接出现在屏幕上，body中将bao 置于最上层 */
+    opacity: 1;
+    /*  */
+    animation: bao_gai 100s ease-in-out 0s  ;
+}
+.pao1 .bao1{
+    right: -100px;
+    position: fixed;
+    z-index: 100;
+    /* 先隐藏，等待 */
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao1 .bao2{
+    right: -100px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao1 .bao3{
+    right: -100px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+.pao2 .fire{
+    position: fixed;
+    display: flex;
+    left: -300px;
+    z-index: 100;
+    /* top:-50px; */
+    top:5px;
+   
+ animation: fire3 300s ease-in-out 0s  ; 
+}
+.pao2 .bao{
+    position: fixed;
+    left: -300px;
+    top:-50px;
+    z-index: 100;
+    opacity: 0;
+    animation: bao_gai 100s ease-in-out 0s  ;
+}
+.pao2 .bao1{
+    left: -300px;
+    top:-50px;
+    position: fixed;
+    z-index: 100;
+    /* 先隐藏，等待 */
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao2 .bao2{
+    left: -300px;
+    top:-50px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao2 .bao3{
+    left: -300px;
+    top:-50px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+.pao3 .fire{
+    position: fixed;
+    display: flex;
+    left: 0px;
+    top:50px;
+    z-index: 100;
+   
+ animation: fire2 300s ease-in-out 0s  ; 
+}
+.pao3 .bao{
+    position: fixed;
+    left: 0px;
+    top:30px;
+    z-index: 100;
+    opacity: 0;
+    animation: bao_gai 100s ease-in-out 0s;   
+}
+.pao3 .bao1{
+    left: 0px;
+    top:30px;
+    position: fixed;
+    z-index: 100;
+    /* 先隐藏，等待 */
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao3 .bao2{
+    left: 0px;
+    top:30px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao3 .bao3{
+    left: 0px;
+    top:30px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+/* 延时点火 */
+/* @keyframes bao_4 {
+    0%{opacity: 0;};
+    2%{opacity: 1;};
+    99%{opacity: 1;};
+    100%{opacity: 0;};
+} */
+@keyframes fire4 {
+    0%{
+        right: 100px;
+        top:5px;
+    }
+    0.45%{
+        right: 90px;
+        top:-300px;
+    }
+    0.80%{
+        right: 120px;
+        top:-380px;
+    }
+    0.99%{
+        right:150px;
+        top:-500px;
+    }    
+    1%{
+        right:200px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+.pao4 .fire{
+    position: fixed;
+    display: flex;
+    right:100px;
+    top:30px;
+    z-index: 100;
+    animation: fire4 300s ease-in-out 0s; 
+}
+.pao4 .bao{
+    position: fixed;
+    right:100px;
+    top:30px;
+    opacity: 1;
+    z-index: 100;
+    animation: bao_gai 100s ease-in-out 0s; 
+}
+.pao4 .bao1{
+    right:100px;
+    top:30px;
+    position: fixed;
+    
+    z-index: 100;
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao4 .bao2{
+    right:100px;
+    top:30px;
+    position: fixed;
+    opacity: 0;
+    z-index: 100;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao4 .bao3{
+    right:100px;
+    top:30px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+/*  水平镜像图片*/
+.pao5 .bao3{
+    transform: scaleX(-1);
+}
+.pao5 .bao2{
+    transform: scaleX(-1);
+}
+.pao5 .bao1{
+    transform: scaleX(-1);
+}
+.pao5 .bao{
+    transform: scaleX(-1);
+}
+.pao5 .bao{
+    position: fixed;
+    left:210px;
+    top:-50px;
+    opacity: 1;
+    animation: bao_gai 100s ease-in-out 0s; 
+}
+@keyframes fire5 {
+    0%{
+        left:180px;
+        top:-50px;
+    }
+    0.45%{
+        right: 90px;
+        top:-300px;
+    }
+    0.80%{
+        right: 120px;
+        top:-380px;
+    }
+    0.99%{
+        right:150px;
+        top:-500px;
+    }    
+    1%{
+        right:200px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+.pao5 .fire{
+    position: fixed;
+    display: flex;
+    left:210px;
+    top:-50px;
+    z-index: 100;
+    animation: fire5 300s ease-in-out 0s; 
+}
+.pao5 .bao1{
+    left:210px;
+    top:-50px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao5 .bao2{
+    left:210px;
+    top:-50px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao5 .bao3{
+    left:210px;
+    top:-50px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+/* ------------------------------------------------------- */
+
+/* 背后细节效果 */
+@keyframes cat {
+    0%{transform: rotate(0deg);}
+    25%{transform:rotate(-30deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform:rotate(30deg);}
+    100%{transform: rotate(0deg);}
+}
+.cat{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    right:-10px;
+    bottom: 10px;
+
+    height: 210px;
+    width: 200px;
+    /* border: 1px solid yellow; */
+
+    animation: cat 3s linear 0s infinite;
+}
+.cat h1{
+    font-size: 12px; 
+    color: red;
+}
+.cat p{
+    /* font-size: 10px; */
+    color: rgb(240, 102, 16);
+    position: relative;
+    
+}
+
+@keyframes txt6 {
+    0%{transform: rotate(0deg);}
+    25%{transform:rotate(5deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform:rotate(-5deg);}
+    100%{transform: rotate(0deg);}
+}
+.txt6{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    right:-10px;
+    top: 10px;
+
+    height: 450px;
+    width: 360px;
+    /* border: 1px solid rgb(236, 86, 16); */
+    animation: txt6 30s linear 0s infinite;
+}
+.txt6 p{
+    color: rgb(165, 46, 46);
+}
+.txt7 p{
+    color: red;
+}
+
+@keyframes txt8 {
+    0%{transform: scale(1);}
+    50%{transform:scale(5);}
+    100%{transform: scale(8);}
+}
+.txt8{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 100px;
+    /* border: 1px solid black; */
+
+    
+    top:47%;
+    left: 45%;
+    animation: txt8 18s linear 3s infinite;
+
+}
+.txt8 h1{
+    color: rgb(255, 153, 0);
+}
+
+@keyframes anim{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+.fu{position: fixed;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    z-index:50;
+    left: 35%;
+    top:10%;
+    align-self: center;
+    margin: 50px auto;
+
+    animation: anim 1s linear 0.7s infinite;
+}
+@keyframes fu_L {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    /* 50%{opacity: 0;} */
+    100%{opacity: 0;}
+}
+.fu_L{
+    /* position: fixed; */
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+    animation: fu_L 3s linear 0.7s infinite;
+
+}
+/* .txt{
+    position: fixed;
+    display: flex;
+
+} */

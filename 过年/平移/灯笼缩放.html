@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        @keyframes anim {
+            0%{
+                top:200px;
+                right: -500px;
+            }
+            40%{
+                right:350px;
+                transform: scale(1);
+                /* 向左移 */
+                /* transform: translate(-850px); */
+            }
+            /* 5%{
+                transform: scale(2.1);
+            } */
+            /* 10%{
+                transform: translate(-800px);
+            } */
+            51%{
+                top:200px;
+                right:350px;
+                /* transform: translate(300px); */
+                transform: scale(5.2);
+                
+            }
+            60%{
+                top:500px;
+                right:350px;
+                transform: scale(6);
+
+            }
+            99%{
+                top:500px;
+                right:350px;
+                transform: scale(10);
+            }
+
+        }
+        .t1{
+            position: fixed;
+            display: flex;
+            width: 600px;
+            height: 600px;
+
+            top:100px;
+            right: -500px;
+            /* border: 1px solid red; */
+
+            animation: anim 5s linear 1s infinite;
+        }
+        .ti .deng{
+            position: fixed;
+            display: flex;
+            right:-600px;
+
+            /* animation: anim 3s linear 0s ;
+            animation-fill-mode:forwards; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <img class="deng" src="灯笼1.png" alt="">
+    </div>
+</body>
+</html>

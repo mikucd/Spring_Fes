@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福3</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        @keyframes show {
+            0%{opacity: 0;}
+            1%{opacity: 1;}
+            100%{opacity: 1;}
+        }
+
+        /* @keyframes anim{
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+
+        } */
+
+        .fu{position: fixed;
+            display: flex;
+            width: 500px;
+            height: 500px;
+            left: 35%;
+            top:10%;
+            align-self: center;
+            margin: 50px auto;
+            opacity: 0;
+            animation: show 20s linear 4s infinite;
+
+            /* animation: anim 1s linear 0s infinite; */
+        }
+        .fu_l{position: fixed;
+            display: flex;
+            width: 500px;
+            height: 500px;
+            left: 5%;
+            top:10%;
+            align-self: center;
+            margin: 50px auto;
+            opacity: 0;
+            animation: show 15s linear 5s infinite;
+
+            /* animation: anim 1s linear 0s infinite; */
+        }
+        .fu_r{position: fixed;
+            display: flex;
+            width: 500px;
+            height: 500px;
+            right: 1%;
+            top:10%;
+            align-self: center;
+            margin: 50px auto;
+            opacity: 0;
+            animation: show 15s linear 8s infinite;
+
+            /* animation: anim 1s linear 0s infinite; */
+        }
+
+        @keyframes identifier {
+            0%{opacity: 0;}
+            10%{opacity: 1;}
+            99%{opacity: 1;}
+            100%{opacity: 0;}
+        }
+        p{
+            position: fixed;
+            display: flex;
+            width: 150px;
+            height: 20px;
+
+            /* border: 1px solid red; */
+            right: 15%;
+            top:47%;
+            opacity: 0;
+            animation: identifier 2.3s linear 5.5s;
+        }
+
+    </style>
+</head>
+<body>
+        <img class="fu" src="福1.png" alt="">
+        <img class="fu_l" src="福1.png" alt="">
+        <img class="fu_r" src="福1.png" alt="">
+        <p><img src="../k.png" alt="用力加载中(doge"></p>
+
+</body>
+</html>

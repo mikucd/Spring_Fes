@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        /* 无到有 然后渐进消失 */
+        @keyframes bao{
+            0%{opacity: 1;};
+            99%{opacity: 1;};
+            100%{opacity: 0;};
+        }
+        /* 有 然后渐进消失 */
+        @keyframes bao_gai {
+            /* 出现 0.1%x100s */
+            0.1%{opacity: 1;}
+            /* 消失 */
+            1%{opacity: 0;}
+            100%{opacity: 0;}    
+        }
+        /* 火花移动 */
+        @keyframes fire {
+            0%{
+                right: -100px;
+                top:5px;
+            }
+            45%{
+                right: -90px;
+                top:-300px;
+            }
+            80%{
+                right: -70px;
+                top:-380px;
+            }
+            99%{
+                right:-60px;
+                top:-500px;
+            }    
+            100%{
+                right:-100px;
+                top:-600px;
+                /* 火花消失 */
+                opacity: 0;
+            }   
+        }
+        .fire{
+            position: fixed;
+            display: flex;
+            right: -100px;
+            top:5px;
+           
+         animation: fire 3s ease-in-out 0s  ; 
+         
+        }
+
+        .bao{
+            position: fixed;
+            right: -100px;
+            /* 直接出现在屏幕上，body中将bao 置于最上层 */
+            opacity: 1;
+            /*  */
+            animation: bao_gai 100s ease-in-out 0s  ;
+        }
+        .bao1{
+            right: -100px;
+            position: fixed;
+            /* 先隐藏，等待 */
+            opacity: 0;
+            animation: bao 0.5s ease-in-out 0s  ;
+        }
+        .bao2{
+            right: -100px;
+            position: fixed;
+            opacity: 0;
+            animation: bao 2s ease-in-out 0s  ;
+        }
+        .bao3{
+            right: -100px;
+            position: fixed;
+            opacity: 0;
+            animation: bao 3s ease-in-out 0s  ;
+        }
+    </style>
+</head>
+<body>
+    <img class="bao3" src="../爆竹效果3.png" alt="">
+    <img class="bao2" src="../爆竹效果2.png" alt="">
+    <img class="bao1" src="../爆竹效果1.png" alt="">
+    <img class="bao" src="../爆竹1.png" alt="">
+    <img class="fire" src="../火花2.png" alt="">
+</body>
+</html>

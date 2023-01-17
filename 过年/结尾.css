@@ -1,0 +1,153 @@
+*{margin: 0px;
+padding: 0px;}
+@keyframes huge {
+    0%{transform: scale(1);}
+    50%{transform: scale(3);}
+    100%{transform:scale(5);}
+}
+.fu{
+    opacity: 0.8;
+    position: fixed;
+    display: flex;
+
+    width: 500px;
+    height: 500px;
+
+    left: 35%;
+    top:10%;
+    z-index: 5;
+
+    align-items: center;
+    margin: 50px auto;
+    animation: huge 20s linear 0s ;
+
+}
+.sub1{
+    position: fixed;
+    display: flex;
+    width: 320px;
+    height: 80px;
+    /* flex-direction: column; */
+    align-items: center;
+
+    z-index: 10;
+    left: 40.7%;
+    top:36%;
+    /* border: 1px solid rebeccapurple; */
+}
+.sub2{
+    position: fixed;
+    display: flex;
+    width: 240px;
+    height: 80px;
+    /* flex-direction: column; */
+    align-items: center;
+    align-self: space-between;
+
+    z-index: 10;
+    left: 43%;
+    top:49%;
+    /* border: 1px solid rebeccapurple; */
+}
+/* .txt .sub1{
+    display: flex;
+}
+.txt .sub2{
+    display: flex;
+} */
+ p{
+    
+    opacity: 1;
+    font-family: FZYaoti;
+    font-size: 80px;
+    color: yellow;
+}
+/* 西 */
+@keyframes huge_w {
+    /* transform-origin: 10px 10px; 
+    定义缩放原点,相对于左上角的距离x、y，单位px */
+    0%{transform: scale(1);}
+    50%{transform-origin: 80px 80px; 
+        transform: scale(5);}
+    100%{transform: scale(1);}  
+}
+/* 北 */
+@keyframes huge_n {
+    /* transform-origin: 10px 10px; 
+    定义缩放原点,相对于左上角的距离x、y，单位px */
+    0%{transform: scale(1);}
+    50%{transform-origin: 40px 80px; 
+        transform: scale(5);}
+    100%{transform: scale(1);}  
+}
+/* 东 */
+@keyframes huge_e {
+    /* transform-origin: 10px 10px; 
+    定义缩放原点,相对于左上角的距离x、y，单位px */
+    0%{transform: scale(1);}
+    50%{transform-origin: 0px 80px; 
+        transform: scale(5);}
+    100%{transform: scale(1);}  
+}
+/* 南 */
+@keyframes huge_s {
+    /* transform-origin: 10px 10px; 
+    定义缩放原点,相对于左上角的距离x、y，单位px */
+    0%{transform: scale(1);}
+    50%{transform-origin: 80px 0px; 
+        transform: scale(5);}
+    100%{transform: scale(1);}  
+}
+.sub1 .p1{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_w 2.4s linear 1s;
+}
+.sub1 .p2{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_n 2s linear 3s;
+}
+.sub1 .p3{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_n 2.5s linear 5s;
+}
+.sub1 .p4{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_e 2s linear 7s;
+}
+.sub2 .p1{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_s 2s linear 8s;
+}
+/* 南南 */
+@keyframes huge_s2 {
+    /* transform-origin: 10px 10px; 
+    定义缩放原点,相对于左上角的距离x、y，单位px */
+    0%{transform: scale(1);}
+    50%{transform-origin: 40px 0px; 
+        transform: scale(5);}
+    100%{transform: scale(1);}  
+}
+.sub2 .p2{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_s2 2.3s linear 9s;
+}
+/* 东东 */
+@keyframes huge_e2 {
+    /* transform-origin: 10px 10px; 
+    定义缩放原点,相对于左上角的距离x、y，单位px */
+    0%{transform: scale(1);}
+    50%{transform-origin: 0px 0px; 
+        transform: scale(5);}
+    100%{transform: scale(1);}  
+}
+.sub2 .p3{
+    opacity: 1;
+    color:rgb(255, 225, 0) ;
+    animation: huge_e2 2.5s linear 9s;
+}

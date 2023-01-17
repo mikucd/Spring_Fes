@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        @keyframes bao{
+            0%{opacity: 1;};
+            99%{opacity: 1;};
+            100%{opacity: 0;};
+        }
+        .bao2{
+            position: relative;
+            opacity: 0;
+            animation: bao 1s ease-in-out 1s infinite ;
+        }
+        .fire{
+            position: fixed;
+            left:-20px;
+            top:-250px;
+            
+            /* opacity: 0;
+            animation: bao 1s ease-in-out 1s infinite; */
+        }
+        .bao3{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <img class="bao3" src="爆竹效果3.png" alt="">
+    <img class="bao2" src="爆竹效果2.png" alt="">
+    <img class="fire" src="火花1.png" alt="">
+</body>
+</html>

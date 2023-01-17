@@ -1,0 +1,349 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* 无到有 然后渐进消失 */
+@keyframes bao{
+    0%{opacity: 1;};
+    99%{opacity: 1;};
+    100%{opacity: 0;};
+}
+/* 有 然后渐进消失 */
+@keyframes bao_gai {
+    /* 出现 0.1%x100s */
+    0.1%{opacity: 1;}
+    /* 消失 */
+    1%{opacity: 0;}
+    100%{opacity: 0;}    
+}
+/* pao1 火花移动 */
+@keyframes fire1 {
+    0%{
+        right: -100px;
+        top:5px;
+    }
+    0.45%{
+        right: -90px;
+        top:-300px;
+    }
+    0.80%{
+        right: -70px;
+        top:-380px;
+    }
+    0.99%{
+        right:-60px;
+        top:-500px;
+    }    
+    1%{
+        right:-100px;
+        top:-600px;
+        /* 火花消失 */
+        opacity: 0;
+    }   
+}
+/* pao2 火花移动 */
+@keyframes fire2 {
+    0%{
+        right: -100px;
+        top:5px;
+    }
+    0.45%{
+        right: -90px;
+        top:-300px;
+    }
+    0.80%{
+        right: -70px;
+        top:-380px;
+    }
+    0.99%{
+        right:-60px;
+        top:-500px;
+    }    
+    1%{
+        right:-100px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+/* pao2 火花移动 */
+@keyframes fire3 {
+    0%{
+        right: -100px;
+        top:5px;
+    }
+    0.45%{
+        right: -90px;
+        top:-300px;
+    }
+    0.80%{
+        right: -70px;
+        top:-380px;
+    }
+    0.99%{
+        right:-80px;
+        top:-500px;
+    }    
+    1%{
+        right:-100px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+.pao1 .fire{
+    position: fixed;
+    display: flex;
+    right: -100px;
+    top:5px;
+   
+ animation: fire1 300s ease-in-out 0s  ; 
+ 
+}
+/* 右—爆竹 */
+.pao1 .bao{
+    position: fixed;
+    right: -100px;
+    /* 直接出现在屏幕上，body中将bao 置于最上层 */
+    opacity: 1;
+    /*  */
+    animation: bao_gai 100s ease-in-out 0s  ;
+}
+.pao1 .bao1{
+    right: -100px;
+    position: fixed;
+    /* 先隐藏，等待 */
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao1 .bao2{
+    right: -100px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao1 .bao3{
+    right: -100px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+.pao2 .fire{
+    position: fixed;
+    display: flex;
+    left: -300px;
+    /* top:-50px; */
+    top:5px;
+   
+ animation: fire3 300s ease-in-out 0s  ; 
+}
+.pao2 .bao{
+    position: fixed;
+    left: -300px;
+    top:-50px;
+    opacity: 0;
+    animation: bao_gai 100s ease-in-out 0s  ;
+}
+.pao2 .bao1{
+    left: -300px;
+    top:-50px;
+    position: fixed;
+    /* 先隐藏，等待 */
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao2 .bao2{
+    left: -300px;
+    top:-50px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao2 .bao3{
+    left: -300px;
+    top:-50px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+.pao3 .fire{
+    position: fixed;
+    display: flex;
+    left: 0px;
+    top:50px;
+   
+ animation: fire2 300s ease-in-out 0s  ; 
+}
+.pao3 .bao{
+    position: fixed;
+    left: 0px;
+    top:30px;
+    opacity: 0;
+    animation: bao_gai 100s ease-in-out 0s;   
+}
+.pao3 .bao1{
+    left: 0px;
+    top:30px;
+    position: fixed;
+    /* 先隐藏，等待 */
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao3 .bao2{
+    left: 0px;
+    top:30px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao3 .bao3{
+    left: 0px;
+    top:30px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+/* 延时点火 */
+/* @keyframes bao_4 {
+    0%{opacity: 0;};
+    2%{opacity: 1;};
+    99%{opacity: 1;};
+    100%{opacity: 0;};
+} */
+@keyframes fire4 {
+    0%{
+        right: 100px;
+        top:5px;
+    }
+    0.45%{
+        right: 90px;
+        top:-300px;
+    }
+    0.80%{
+        right: 120px;
+        top:-380px;
+    }
+    0.99%{
+        right:150px;
+        top:-500px;
+    }    
+    1%{
+        right:200px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+.pao4 .fire{
+    position: fixed;
+    display: flex;
+    right:100px;
+    top:30px;
+    animation: fire4 300s ease-in-out 0s; 
+}
+.pao4 .bao{
+    position: fixed;
+    right:100px;
+    top:30px;
+    opacity: 1;
+    animation: bao_gai 100s ease-in-out 0s; 
+}
+.pao4 .bao1{
+    right:100px;
+    top:30px;
+    position: fixed;
+    
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao4 .bao2{
+    right:100px;
+    top:30px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao4 .bao3{
+    right:100px;
+    top:30px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}
+
+/*  水平镜像图片*/
+.pao5 .bao3{
+    transform: scaleX(-1);
+}
+.pao5 .bao2{
+    transform: scaleX(-1);
+}
+.pao5 .bao1{
+    transform: scaleX(-1);
+}
+.pao5 .bao{
+    transform: scaleX(-1);
+}
+.pao5 .bao{
+    position: fixed;
+    left:210px;
+    top:-50px;
+    opacity: 1;
+    animation: bao_gai 100s ease-in-out 0s; 
+}
+@keyframes fire5 {
+    0%{
+        left:180px;
+        top:-50px;
+    }
+    0.45%{
+        right: 90px;
+        top:-300px;
+    }
+    0.80%{
+        right: 120px;
+        top:-380px;
+    }
+    0.99%{
+        right:150px;
+        top:-500px;
+    }    
+    1%{
+        right:200px;
+        top:-600px;
+        
+        opacity: 0;
+    }   
+}
+.pao5 .fire{
+    position: fixed;
+    display: flex;
+    left:210px;
+    top:-50px;
+    animation: fire5 300s ease-in-out 0s; 
+}
+.pao5 .bao1{
+    left:210px;
+    top:-50px;
+    position: fixed;
+    
+    opacity: 0;
+    animation: bao 0.5s ease-in-out 0s  ;
+}
+.pao5 .bao2{
+    left:210px;
+    top:-50px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 2s ease-in-out 0s  ;
+}
+.pao5 .bao3{
+    left:210px;
+    top:-50px;
+    position: fixed;
+    opacity: 0;
+    animation: bao 3s ease-in-out 0s  ;
+}

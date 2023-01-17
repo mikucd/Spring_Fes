@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2福_huge</title>
+    <style>
+        *{margin: 0px;
+            padding: 0px;
+        }
+        @keyframes huge {
+            0%{
+                transform: scale();
+            }
+            25%{
+                transform: scale(1.4);
+            }
+            100%{
+                transform: scale(2);
+
+            }
+            
+        }
+        .fu_r{
+                position: fixed;
+            display: flex;
+            width: 500px;
+            height: 500px;
+            right: 1%;
+            top:10%;
+            align-self: center;
+            margin: 50px auto;
+            animation: huge 1s  0s infinite;
+
+            }
+
+            .fu{position: fixed;
+            display: flex;
+            width: 500px;
+            height: 500px;
+            left: 35%;
+            top:10%;
+            align-self: center;
+            margin: 50px auto;
+
+            animation: huge 1s  0s infinite;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <img class="fu_r" src="福1.png" alt="">
+    <img class="fu" src="福1.png" alt="">
+
+</body>
+</html>
